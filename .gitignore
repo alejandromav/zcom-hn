@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+dist/
+*.log
+.idea
+*.iml
+.nuxt
+.vscode
+
+static/manifest*.json
+static/sw.js
+static/workbox-sw*.js*
