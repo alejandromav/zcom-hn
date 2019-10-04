@@ -140,6 +140,10 @@ a {
   }
 }
 
+.news-list-nav a {
+  font-weight: bold;
+}
+
 @media (max-width: 860px) {
   .header .inner {
     padding: 15px 30px;
