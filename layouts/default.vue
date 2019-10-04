@@ -3,7 +3,10 @@
     <header class="header">
       <nav class="inner" role="navigation">
         <router-link to="/" exact>
-          <img class="logo" src="~/assets/logo-white.svg" alt="logo" />
+          <img class="logo" src="~/assets/logo-white.svg" alt="logo">
+        </router-link>
+        <router-link v-for="(list, key) in feeds" :key="key" :to="`/${key}`">
+          {{ list.title }}
         </router-link>
         <router-link v-for="(list, key) in feeds" :key="key" :to="`/${key}`">{{ list.title }}</router-link>
       </nav>
