@@ -68,7 +68,7 @@ export default {
 
   .meta, .host {
     font-size: 0.85em;
-    color: #595959;
+    color: #999;
 
     a {
       color: #595959;
