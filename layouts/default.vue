@@ -140,6 +140,11 @@ a {
   }
 }
 
+.news-item .host, .news-item .meta {
+  font-size: 0.85em;
+  color: #999;
+}
+
 @media (max-width: 860px) {
   .header .inner {
     padding: 15px 30px;
