@@ -53,7 +53,7 @@ a {
 }
 
 .header {
-  background-color: #fff;
+  background-color: #2d2d2d;
   z-index: 999;
   height: 55px;
   border-bottom: 1px solid #848484;
@@ -66,7 +66,7 @@ a {
   }
 
   a {
-    color: #2d2d2d;
+    color: #fff
     line-height: 24px;
     transition: color 0.15s ease;
     display: inline-block;
@@ -76,11 +76,11 @@ a {
     margin-right: 1.8em;
 
     &:hover {
-      color: #2d2d2d;
+      color: #fff;
     }
 
     &.router-link-active, &.nuxt-link-active {
-      color: #2d2d2d;
+      color: #fff;
       font-weight: 600;
     }
 
@@ -90,7 +90,7 @@ a {
   }
 
   .github {
-    color: #2d2d2d;
+    color: #fff;
     font-size: 0.9em;
     margin: 0;
     float: right;
