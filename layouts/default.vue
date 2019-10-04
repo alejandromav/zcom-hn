@@ -15,24 +15,24 @@
 </template>
 
 <script>
-import { feeds } from '~/common/api';
+import { feeds } from "~/common/api";
 
 export default {
-    head() {
-        const host = process.server
-            ? this.$ssrContext.req.headers.host
-            : window.location.host;
+  head() {
+    const host = process.server
+      ? this.$ssrContext.req.headers.host
+      : window.location.host;
 
-        return {
-            link: [
-                // We use $route.path since we don't use query parameters
-                { rel: 'canonical', href: `https://${host}${this.$route.path}` }
-            ]
-        };
-    },
-    computed: {
-        feeds: () => feeds
-    }
+    return {
+      link: [
+        // We use $route.path since we don't use query parameters
+        { rel: "canonical", href: `https://${host}${this.$route.path}` }
+      ]
+    };
+  },
+  computed: {
+    feeds: () => feeds
+  }
 };
 </script>
 
@@ -120,6 +120,26 @@ a {
 
 .appear, .page-enter, .page-leave-active {
   opacity: 0;
+}
+
+.header {
+  background-color: #2d2d2d;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &.router-link-active, &.nuxt-link-active {
+      color: #fff;
+    }
+  }
+
+  .github {
+    color: #fff;
+  }
 }
 
 @media (max-width: 860px) {
