@@ -3,7 +3,7 @@
     <header class="header">
       <nav class="inner" role="navigation">
         <router-link to="/" exact>
-          <img class="logo" src="~/assets/logo.svg" alt="logo" />
+          <img class="logo" src="~/assets/logo-white.svg" alt="logo" />
         </router-link>
         <router-link v-for="(list, key) in feeds" :key="key" :to="`/${key}`">{{ list.title }}</router-link>
       </nav>
@@ -118,6 +118,26 @@ a {
 
 .appear, .page-enter, .page-leave-active {
   opacity: 0;
+}
+
+.header {
+  background-color: #2d2d2d;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &.router-link-active, &.nuxt-link-active {
+      color: #fff;
+    }
+  }
+
+  .github {
+    color: #fff;
+  }
 }
 
 @media (max-width: 860px) {
