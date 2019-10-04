@@ -3,11 +3,9 @@
     <header class="header">
       <nav class="inner" role="navigation">
         <router-link to="/" exact>
-          <img class="logo" src="~/assets/logo.svg" alt="logo">
+          <img class="logo" src="~/assets/logo.svg" alt="logo" />
         </router-link>
-        <router-link v-for="(list, key) in feeds" :key="key" :to="`/${key}`">
-          {{ list.title }}
-        </router-link>
+        <router-link v-for="(list, key) in feeds" :key="key" :to="`/${key}`">{{ list.title }}</router-link>
       </nav>
     </header>
     <nuxt nuxt-child-key="none" role="main" />
@@ -15,24 +13,24 @@
 </template>
 
 <script>
-import { feeds } from '~/common/api';
+import { feeds } from "~/common/api";
 
 export default {
-    head() {
-        const host = process.server
-            ? this.$ssrContext.req.headers.host
-            : window.location.host;
+  head() {
+    const host = process.server
+      ? this.$ssrContext.req.headers.host
+      : window.location.host;
 
-        return {
-            link: [
-                // We use $route.path since we don't use query parameters
-                { rel: 'canonical', href: `https://${host}${this.$route.path}` }
-            ]
-        };
-    },
-    computed: {
-        feeds: () => feeds
-    }
+    return {
+      link: [
+        // We use $route.path since we don't use query parameters
+        { rel: "canonical", href: `https://${host}${this.$route.path}` }
+      ]
+    };
+  },
+  computed: {
+    feeds: () => feeds
+  }
 };
 </script>
 
@@ -130,16 +128,22 @@ a {
 
 @media (max-width: 600px) {
   .header {
-    .inner {
-      padding: 15px;
-    }
+    background-color: #2d2d2d;
 
     a {
-      margin-right: 1em;
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &.router-link-active, &.nuxt-link-active {
+        color: #fff;
+      }
     }
 
     .github {
-      display: none;
+      color: #fff;
     }
   }
 }
