@@ -48,6 +48,8 @@ export default {
 
 <style lang="stylus">
 .news-item {
+  font-size: .85em;
+  color: #999;
   background-color: #fff;
   padding: 20px 30px 20px 80px;
   border-bottom: 1px solid #eee;
