@@ -4,21 +4,19 @@
     <span class="title">
       <template v-if="isAbsolute(item.url)">
         <a :href="item.url" target="_blank" rel="noopener">{{ item.title }}</a>
-        <span class="host"> ({{ item.url | host }})</span>
+        <span class="host">({{ item.url | host }})</span>
       </template>
       <template v-else>
         <router-link :to="'/item/' + item.id">{{ item.title }}</router-link>
       </template>
     </span>
-    <br>
+    <br />
     <span class="meta">
       <span v-if="item.type !== 'job'" class="by">
         by
         <router-link :to="'/user/' + item.user">{{ item.user }}</router-link>
       </span>
-      <span class="time">
-        {{ item.time | timeAgo }} ago
-      </span>
+      <span class="time">{{ item.time | timeAgo }} ago</span>
       <span v-if="item.type !== 'job'" class="comments-link">
         |
         <router-link :to="'/item/' + item.id">{{ item.comments_count }} comments</router-link>
@@ -28,25 +26,30 @@
 </template>
 
 <script>
-import { timeAgo } from '~/plugins/filters';
+import { timeAgo } from "~/plugins/filters";
 
 export default {
-    name: 'NewsItem',
-    props: {
-        item: {
-            type: Object,
-            required: true
-        }
-    },
-    methods: {
-        isAbsolute(url) {
-            return /^https?:\/\//.test(url);
-        }
+  name: "NewsItem",
+  props: {
+    item: {
+      type: Object,
+      required: true
     }
+  },
+  methods: {
+    isAbsolute(url) {
+      return /^https?:\/\//.test(url);
+    }
+  }
 };
 </script>
 
 <style lang="stylus">
+.news-item .host, .news-item .meta {
+  font-size: 0.85em;
+  color: #999;
+}
+
 .news-item {
   background-color: #fff;
   padding: 20px 30px 20px 80px;
