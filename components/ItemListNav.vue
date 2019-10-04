@@ -49,6 +49,7 @@ export default {
 
   a {
     margin: 0 1em;
+    font-weight: bold;
   }
 
   .disabled {
