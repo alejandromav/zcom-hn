@@ -55,7 +55,7 @@ export default {
   line-height: 20px;
 
   .score {
-    color: #2d2d2d;
+    color: #00a699;
     font-size: 1.1em;
     font-weight: 700;
     position: absolute;
